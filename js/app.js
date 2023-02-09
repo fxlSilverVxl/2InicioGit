@@ -23,6 +23,7 @@ playBtn.addEventListener('click', () => {
 
 const setMusic = (i) => {
     seekBar.value = 0
+    console.log(songs[i])
     let song = songs[i]
     currentMusic = i;
     music.src = song.path
@@ -34,6 +35,7 @@ const setMusic = (i) => {
     // * Ponemos un delay
     setTimeout(() => {
         seekBar.max = music.duration
+        console.log('duracion', music.duration)
         musicDuration.innerHTML = formatTime(music.duration)
     }, 500)
 }
@@ -63,7 +65,7 @@ setInterval(() => {
 
 // Funciones para adelantar y atrasar 
 forwardBtn.addEventListener('click', () => {
-    if( currentMusic == songs.lenght - 1) {
+    if( currentMusic >= songs.lenght - 1) {
         currentMusic = 0
     } else {
         currentMusic++

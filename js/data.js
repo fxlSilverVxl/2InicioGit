@@ -1,18 +1,18 @@
 const songs = [
     {
-        name: 'La cancion mas insana del oeste 🤑',
+        name: 'Nombre no largo1',
         path: '../music/Song 1.mp3',
         artist: 'Yo',
         cover: '../images/cover 1.png'
     },
     {
-        name: 'La cancion menos insana del oeste 🥶',
+        name: 'Nombre no largo2',
         path: '../music/Song 2.mp3',
         artist: 'Yo',
         cover: '../images/cover 2.png'
     },
     {
-        name: 'Ni tan insana ni tan insanant 😎',
+        name: 'Nombre no largo3',
         path: '../music/Song 3.mp3',
         artist: 'Yo',
         cover: '../images/cover 3.png'
