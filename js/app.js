@@ -13,9 +13,9 @@ const backwardBtn = document.querySelector('.backward-btn')
 
 playBtn.addEventListener('click', () => {
     if (playBtn.className.includes('pause')) { 
-        //music.play() 
+        music.play() 
     } else { 
-        //music.pause() 
+        music.pause() 
     }
     playBtn.classList.toggle('pause')
     disk.classList.toggle('play')
@@ -51,7 +51,7 @@ const formatTime = (time) => {
     }
     return `${ min } : ${ sec }`
 }
-/*
+
 // Trabajar con el seek bar 
 setInterval(() => {
     seekBar.value = music.currentTime
@@ -63,7 +63,7 @@ setInterval(() => {
 
 // Funciones para adelantar y atrasar 
 forwardBtn.addEventListener('click', () => {
-    if(currentMusic == songs.lenght - 1) {
+    if( currentMusic == songs.lenght - 1) {
         currentMusic = 0
     } else {
         currentMusic++
@@ -71,4 +71,19 @@ forwardBtn.addEventListener('click', () => {
     setMusic(currentMusic)
     playMusic()
 })
-*/
+
+backwardBtn.addEventListener('click', () => {
+    if( currentMusic <= 0 ) {
+        currentMusic = songs.lenght - 1;
+    } else {
+        currentMusic--
+    }
+    setMusic(currentMusic)
+    playMusic()
+})
+
+const playMusic = () => {
+    music.play();
+    playBtn.classList.remove('pause')
+    disk.classList.add('play')
+}
